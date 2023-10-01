@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="mx-20">
+    <header class="bg-cyan-50 mt-8 flex justify-between items-center">
+        <h2 class="bg-yellow-400 text-rose-600 text-3xl font-bold">AroiJung</h2>
+    </header>
+    <div>
+        <img src="{% static 'image_1.png' %}" alt="image1">
+    </div>
+    <div class="text-[96px]">
+        <h1 class="mt-[60px]">Are you</h1>
+        <h1 class="text-red-600 mt-0">Hungry</h1>
+        <h1 class="mt-0">just click</h1>
+    </div>
+    <form action="{% url 'signin' %}">
+        <button class="bg-pink-300 hover:bg-rose-500 w-96 text-xl">Login</button>
+
+    </form>
+    <div>
+
+    </div>
+
+</body>
+</html>
