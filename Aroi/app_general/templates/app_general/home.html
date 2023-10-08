@@ -9,34 +9,64 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body class="bg-[url({% static 'images/bg.png' %})] bg-no-repeat bg-cover bg-contian ml-20">
-
-<nav class="mt-16 ml-6">
-    <h1 class="text-red-500 text-[45px]">AroiJung</h1>
-</nav>
-
-<div class="text-[#FFC700] ml-24 mt-8">
-    <h1 class="text-[130px]">Random</h1>
-    <h1 class="text-[60px]">Food or drink</h1>
-</div>
-
-<div class="md:flex mt-16 ml-16 bg-[#9C081A] w-80 h-48 rounded-xl">
-    <div class="h-48 bg-[#CE848D] rounded-xl">
-        <div class="w-36 h-36 justify-center flex items-center">
-            <img class="" src="{% static 'images/Rice.png' %}" alt="rice">
+    <nav class="mt-16 ml-6">
+        <h1 class="text-red-500 text-[45px]">AroiJung</h1>
+    </nav>
+    <div class="md:flex">
+        <div class="text-[#FFC700] ml-24 mt-8">
+            <h1 class="text-[130px]">Random</h1>
+            <h1 class="text-[60px]">Food or drink</h1>
         </div>
+
+        <div class="">
+            <img src="{% static 'images/rice2.png'%}" alt="rice2">
+        </div>
+    </div>
+
+    
+
+    <div class="md:flex card">
+        <div class="md:flex mt-16 ml-16 bg-[#9C081A] w-80 h-48 rounded-xl">
+            <div class="h-48 bg-[#CE848D] rounded-xl">
+                <div class="w-36 h-36 justify-center flex items-center">
+                    <img src="{% static 'images/Rice.png' %}" alt="rice">
+                </div>
+                
+            </div>
+            <div class="mx-auto">
         
-    </div>
-    <div class="mx-auto">
-
-        <h3 class="justify-center flex items-center h-24 text-4xl text-white">food</h3>
-        <div class="mx-auto border-2 bg-gray">
-            <button class="bg-white w-36 h-8 rounded-xl m">
-                <p>click</p>
-            </button>
+                <h3 class="justify-center flex items-center h-24 text-4xl text-white">food</h3>
+                <div class="mx-auto border-2 bg-gray">
+                    <button class="bg-white w-36 h-8 rounded-xl m">
+                        <p>click</p>
+                    </button>
+                </div>
+                    
+            </div>
         </div>
-            
+
+        <div class="md:flex mt-16 ml-16 bg-[#6A72BB] w-80 h-48 rounded-xl">
+            <div class="h-48 bg-[#B5B9DD] rounded-xl">
+                <div class="w-36 h-36 justify-center flex items-center">
+                    <img src="{% static 'images/Rice.png' %}" alt="rice">
+                </div>
+                
+            </div>
+            <div class="mx-auto">
+        
+                <h3 class="justify-center flex items-center h-24 text-4xl text-white">drink</h3>
+                <div class="mx-auto border-2 bg-gray">
+                    <button class="bg-white w-36 h-8 rounded-xl m">
+                        <p>click</p>
+                    </button>
+                </div>
+                    
+            </div>
+        </div>
     </div>
-</div>
+    </div>
+
+
 
 
 </body>
