@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,36 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
-<body class="mx-50">
-    <header class="bg-[#D9D9D9] h-10 flex justify-between items-center">
-        <h2 class="bg-[#D9D9D9] text-[#EF1A80] text-2xl ml-16 font-bold">AroiJung</h2>
-        <div>
-            <ul class="flex items-center gap-8 text-lg mr-16">
-                <li class="hover:border-2 hover:bg-[#EF1A80] hover:rounded-xl mr-5 text-[#EF1A80]"><a href="#">home</a></li>
-                <li class="hover:border-2 hover:bg-[#EF1A80] hover:rounded-xl mr-5 text-[#EF1A80]"><a href="#">about</a></li>
-                <li class="hover:border-2 hover:bg-[#EF1A80] hover:rounded-xl mr-5 text-[#EF1A80]"><a href="#">shop</a></li>
-                <li class="hover:border-2 hover:bg-[#EF1A80] hover:rounded-xl mr-5 text-[#EF1A80]"><a href="#">raidee</a></li>
-            </ul>
+<body class="bg-[url({% static 'images/bg.png' %})] bg-no-repeat bg-cover bg-contian ml-20">
+
+<nav class="mt-16 ml-6">
+    <h1 class="text-red-500 text-[45px]">AroiJung</h1>
+</nav>
+
+<div class="text-[#FFC700] ml-24 mt-8">
+    <h1 class="text-[130px]">Random</h1>
+    <h1 class="text-[60px]">Food or drink</h1>
+</div>
+
+<div class="md:flex mt-16 ml-16 bg-[#9C081A] w-80 h-48 rounded-xl">
+    <div class="h-48 bg-[#CE848D] rounded-xl">
+        <div class="w-36 h-36 justify-center flex items-center">
+            <img class="" src="{% static 'images/Rice.png' %}" alt="rice">
         </div>
-    </header>
-    <div class="text-7xl mt-20 ml-16">
-        <h1 class="ml-10" >Are you</h1>
-        <h1 class="ml-10 text-[#FF3E60]">Hungry</h1>
-        <h1 class="ml-10" >Find your food</h1>
-    </div>
-    <div class = "mt-10 ml-16">
-        <input  type="text" class="ml-10 w-80 h-10 text-sm placeholder-gray-500 placeholder::text-xs 
-        border-rose-500 border-2 rounded-lg border-[#D61818]" 
-        placeholder="     มื้อนี้ทานอะไรดี">
         
-        <a href="#">
-            <button class="bg-[#ED9818] hover:bg-amber-300 font-bold w-40 h-10 absolute top-90 left-80 rounded-lg">
-                Search
-            </button>
-        </button>
-        </a>
     </div>
+    <div class="mx-auto">
+
+        <h3 class="justify-center flex items-center h-24 text-4xl text-white">food</h3>
+        <div class="mx-auto border-2 bg-gray">
+            <button class="bg-white w-36 h-8 rounded-xl m">
+                <p>click</p>
+            </button>
+        </div>
+            
+    </div>
+</div>
+
+
 </body>
 </html>
