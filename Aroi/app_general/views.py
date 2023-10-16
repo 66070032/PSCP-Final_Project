@@ -6,4 +6,4 @@ def home(request):
 def landing(request):
     return render(request, 'app_general/food.html')
 def signin(request):
-    return render(request, 'app_general/signin.html')
+    return render(request, 'app_general/drinks.html')
