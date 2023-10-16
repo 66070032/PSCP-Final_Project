@@ -4,6 +4,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'app_general/home.html')
 def landing(request):
-    return render(request, 'app_general/landing.html')
+    return render(request, 'app_general/food.html')
 def signin(request):
     return render(request, 'app_general/signin.html')
