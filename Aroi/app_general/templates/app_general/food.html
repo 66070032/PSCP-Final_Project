@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body bgcolor="#272C3D">
     <body class="mx-20">
@@ -15,15 +15,16 @@
             <p align="center"><h1 p align="center" class="text-[#EBD78F] text-5xl mt-2 font-bold">Food</h1></p>
         </header>
     </body>
-<div class="bg-[url({% static 'images/orange.png' %})] bg-no-repeat bg-cover bg-contian ml-20">
-    <div class="flex flex-col">
-        <button class="bg-white mt-28 ml-40  w-52 h-12 border-4 border-[#AA0F0F] rounded-xl m">
-            <p align="center"><p align="center" class="text-black-100 text-3xl font-bold">Money</p>
-            </button>
-        <button class="bg-[#890202] mt-14 ml-36  w-64 h-12 border-4 border-[#FFCA99] rounded-xl m">
-            <p align="center"><p align="center" class="text-[#FFDD64] text-3xl font-bold">random</p>
+    <body class="bg-[url({% static 'images/orange.png' %})]">
+        <div class="flex flex-col">
+            <button class="bg-white mt-28 ml-40  w-52 h-12 border-4 border-[#AA0F0F] rounded-xl m">
+                <p align="center"><p align="center" class="text-black-100 text-3xl font-bold">Money</p>
+                </button>
+            <button class="bg-[#890202] mt-14 ml-36  w-64 h-12 border-4 border-[#FFCA99] rounded-xl m">
+                <p align="center"><p align="center" class="text-[#FFDD64] text-3xl font-bold">random</p>
             </button>
         </div>
+    </body>
     <body class="bg-[#232B62] mt-72 w-72 h-20">
             <p align="center"><h1 p align="center" class="text-[#FFC04D] text-4xl mt-72 font-bold">AroiJung</h1></p>
         </header>
