@@ -7,5 +7,7 @@ def food(request):
     return render(request, 'app_general/food.html')
 def drinks(request):
     return render(request, 'app_general/drinks.html')
-def signin(request):
-    return render(request, 'app_general/signin.html')
+def randomfood(request):
+    return render(request, 'app_general/randomfood.html')
+def randomdrinks(request):
+    return render(request, 'app_general/randomdrinks.html')
