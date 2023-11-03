@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>cc
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-[#272C3D]">
+    <div class="w-1/3 mt-16 mx-auto">
+        <h1 class="text-center text-[#EBD78F] text-6xl mt-10 font-bold">Random</h1>
+        <h3 class="text-center text-[#EBD78F] text-5xl mt-2 font-bold">drink</h3>
+    </div>
+    <img class="float-right h-108 w-96 mr-36 absolute right-40" src="{% static 'images/drink.png' %}" alt="drink">
+    <div class="bg-[url({% static 'images/bg-blue.png' %})] bg-cover md:max-w-4xl mx-auto h-96 rounded-2xl">
+        <div class="ml-20 w-1/2 mt-16 my-auto">
+            <div class="mt-8">
+                <input type="text" placeholder="your money" class="text-center mt-36 bg-white w-80 h-12 rounded-xl hover:border-4 border-red-600">
+            </div>
+                
+            <button class="mt-8 bg-[#303383] w-80 h-12 rounded-xl hover:border-4 border-[#FFCA99]">
+                <a class="text-[#FFDD64] text-2xl font-bold" href='randomdrinks'>random</a>
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>
