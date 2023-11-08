@@ -36,6 +36,24 @@ def random_food_action(request):
         menu_price = all_menu_price[menu_id][menu_name]
 
     print(shop_name, menu_name, menu_price)
-
     json_data.close()
-    return render(request, 'app_general/home.html')
+    return render(request, 'app_general/randomfood.html')
+
+def random_drinks_action(request):
+    json_data2 = open("app_general/static/datadrinks.json", "r", encoding="utf8")
+    jsonData2 = json.load(json_data2)
+
+    shop_id2 = random.randint(0, len(jsonData2))
+    for i in jsonData2[shop_id2]:
+        shop_name2 = i
+
+    all_menu_price = jsonData2[shop_id2][shop_name2]
+    menu_id2 = random.randint(0, len(all_menu_price))
+    for i in all_menu_price[menu_id2]:
+        menu_name2 = i
+        menu_price2 = all_menu_price[menu_id2][menu_name2]
+
+    print(shop_name2, menu_name2, menu_price2)
+
+    json_data2.close()
+    return render(request, 'app_general/randomdrinks.html')
