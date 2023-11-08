@@ -48,6 +48,9 @@ def random_drinks_action(request):
     json_data2 = open("app_general/static/datadrinks.json", "r", encoding="utf8")
     jsonData2 = json.load(json_data2)
 
+    if request.method == "POST":
+        price_limit = request.POST.get("price_limit")
+
     shop_id2 = random.randint(0, len(jsonData2))
     for i in jsonData2[shop_id2]:
         shop_name2 = i
@@ -57,8 +60,10 @@ def random_drinks_action(request):
     for i in all_menu_price[menu_id2]:
         menu_name2 = i
         menu_price2 = all_menu_price[menu_id2][menu_name2]
+    if int(menu_price2) > int(price_limit):
+        return render(request, 'app_general/randomdrinks.html', {'shop_name2':"ขออภัยไม่พบร้านค้า", 'menu_name2':"ขออภัยอาหารจานนี้เกินงบของคุณโปรดสุ่มใหม่", 'menu_price2':"0"})
 
-    print(shop_name2, menu_name2, menu_price2)
+    print(shop_name2, menu_name2, menu_price2, price_limit)
 
     json_data2.close()
-    return render(request, 'app_general/randomdrinks.html')
+    return render(request, 'app_general/randomdrinks.html', {'shop_name2':shop_name2, 'menu_name2':menu_name2, 'menu_price2':menu_price2})
