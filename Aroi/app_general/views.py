@@ -25,6 +25,9 @@ def random_food_action(request):
     json_data = open("app_general/static/data.json", "r", encoding="utf8")
     jsonData = json.load(json_data)
 
+    if request.method == "POST":
+        price_limit = request.POST.get("price_limit")
+
     shop_id = random.randint(0, len(jsonData))
     for i in jsonData[shop_id]:
         shop_name = i
@@ -34,6 +37,8 @@ def random_food_action(request):
     for i in all_menu_price[menu_id]:
         menu_name = i
         menu_price = all_menu_price[menu_id][menu_name]
+    if int(menu_price) > int(price_limit):
+        return render(request, 'app_general/randomfood.html', {'shop_name':"ขออภัยไม่พบร้านค้า", 'menu_name':"ขออภัยอาหารจานนี้เกินงบของคุณโปรดสุ่มใหม่", 'menu_price':"0"})
 
     print(shop_name, menu_name, menu_price)
     json_data.close()

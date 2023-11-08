@@ -16,11 +16,13 @@
     <img class="float-right h-80 w-96 mr-48 mt-24 absolute right-40" src="{% static 'images/rice3.png' %}" alt="rice">
     <div class="bg-[url({% static 'images/bg-red.png' %})] bg-cover md:max-w-4xl mx-auto h-96 rounded-2xl">
         <div class="ml-20 w-1/2 mt-16 my-auto">
-            <div class="mt-8">
-                <input type="text" placeholder="your money" class="text-center mt-36 bg-white w-80 h-12 rounded-xl hover:border-4 border-red-600">
-            </div>
             
-            <form action="random_food_action">
+            
+            <form method="post" action="random_food_action">
+                {% csrf_token %}
+                <div class="mt-8">
+                    <input type="number" placeholder="your money" class="text-center mt-36 bg-white w-80 h-12 rounded-xl hover:border-4 border-red-600" name="price_limit" id="price_limit">
+                </div>
                 <button class="mt-8 bg-[#890202] w-80 h-12 rounded-xl hover:border-4 border-[#FFCA99]">
                     <h1 class="text-[#FFDD64] text-2xl font-bold id="stat-btn" class="btn"">random</h1>
                 </button>
