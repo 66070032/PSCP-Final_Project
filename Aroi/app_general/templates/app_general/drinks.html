@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>cc
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -19,10 +19,12 @@
             <div class="mt-8">
                 <input type="text" placeholder="your money" class="text-center mt-36 bg-white w-80 h-12 rounded-xl hover:border-4 border-red-600">
             </div>
-                
-            <button class="mt-8 bg-[#303383] w-80 h-12 rounded-xl hover:border-4 border-[#FFCA99]">
-                <a class="text-[#FFDD64] text-2xl font-bold" href='randomdrinks'>random</a>
-            </button>
+            
+            <form action="random_drinks_action">
+                <button class="mt-8 bg-[#890202] w-80 h-12 rounded-xl hover:border-4 border-[#FFCA99]">
+                    <h1 class="text-[#FFDD64] text-2xl font-bold id="stat-btn" class="btn"">random</h1>
+                </button>
+
         </div>
     </div>
     
