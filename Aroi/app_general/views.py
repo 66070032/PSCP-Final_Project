@@ -37,7 +37,7 @@ def random_food_action(request):
 
     print(shop_name, menu_name, menu_price)
     json_data.close()
-    return render(request, 'app_general/randomfood.html')
+    return render(request, 'app_general/randomfood.html', {'shop_name':shop_name, 'menu_name':menu_name, 'menu_price':menu_price})
 
 def random_drinks_action(request):
     json_data2 = open("app_general/static/datadrinks.json", "r", encoding="utf8")
