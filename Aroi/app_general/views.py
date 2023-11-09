@@ -25,8 +25,13 @@ def random_food_action(request):
     json_data = open("app_general/static/data.json", "r", encoding="utf8")
     jsonData = json.load(json_data)
 
+    price_limit = 0
+
     if request.method == "POST":
         price_limit = request.POST.get("price_limit")
+
+    if price_limit == '' :
+        return render(request, 'app_general/food.html')
 
     shop_id = random.randint(0, len(jsonData) - 1)
     for i in jsonData[shop_id]:
@@ -40,8 +45,6 @@ def random_food_action(request):
     if int(menu_price) > int(price_limit):
         return random_food_action(request)
 
-    print(shop_name, menu_name, menu_price)
-
     shop_food_url = "images/menu/" + menu_name + ".png"
     json_data.close()
     return render(request, 'app_general/randomfood.html', {'shop_name':shop_name, 'menu_name':menu_name, 'menu_price':menu_price, 'shop_food_url':shop_food_url})
@@ -50,8 +53,14 @@ def random_drinks_action(request):
     json_data2 = open("app_general/static/datadrinks.json", "r", encoding="utf8")
     jsonData2 = json.load(json_data2)
 
+    price_limit = 0
+
     if request.method == "POST":
         price_limit = request.POST.get("price_limit2")
+
+    if price_limit == '' :
+        return render(request, 'app_general/drinks.html')
+
 
     shop_id2 = random.randint(0, len(jsonData2) - 1)
     for i in jsonData2[shop_id2]:
@@ -64,8 +73,6 @@ def random_drinks_action(request):
         menu_price2 = all_menu_price[menu_id2][menu_name2]
     if int(menu_price2) > int(price_limit):
         return random_drinks_action(request)
-
-    print(shop_name2, menu_name2, menu_price2, price_limit)
 
     shop_drink_url = "images/menu/" + menu_name2 + ".png"
     json_data2.close()
