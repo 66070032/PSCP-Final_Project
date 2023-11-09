@@ -41,8 +41,10 @@ def random_food_action(request):
         return random_food_action(request)
 
     print(shop_name, menu_name, menu_price)
+
+    shop_food_url = "images/menu/" + menu_name + ".png"
     json_data.close()
-    return render(request, 'app_general/randomfood.html', {'shop_name':shop_name, 'menu_name':menu_name, 'menu_price':menu_price})
+    return render(request, 'app_general/randomfood.html', {'shop_name':shop_name, 'menu_name':menu_name, 'menu_price':menu_price, 'shop_food_url':shop_food_url})
 
 def random_drinks_action(request):
     json_data2 = open("app_general/static/datadrinks.json", "r", encoding="utf8")
@@ -65,5 +67,6 @@ def random_drinks_action(request):
 
     print(shop_name2, menu_name2, menu_price2, price_limit)
 
+    shop_drink_url = "images/menu/" + menu_name2 + ".png"
     json_data2.close()
-    return render(request, 'app_general/randomdrinks.html', {'shop_name2':shop_name2, 'menu_name2':menu_name2, 'menu_price2':menu_price2})
+    return render(request, 'app_general/randomdrinks.html', {'shop_name2':shop_name2, 'menu_name2':menu_name2, 'menu_price2':menu_price2, 'shop_drink_url': shop_drink_url})

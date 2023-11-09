@@ -10,7 +10,9 @@
 </head>
 <body class="bg-[#FF6432] mt-40 mx-72 flex flex-col">
     <div class="bg-white md:max-w-48 h-96 rounded-xl"></div>
-    <div class="bg-[#FFE6E6] ml-14 w-80 h-64 absolute top-56"></div>
+    <div class="bg-[#FFE6E6] ml-14 w-80 h-64 absolute top-56 bg-im">
+        <img class="float-right h-80 w-96 mr-48 mt-24 absolute right-40" src="{% static shop_food_url %}" alt="menu_name">
+    </div>
     <h1 class="text-[black] text-4xl font-bold mb-5 w-96 fixed bottom-36 right-80 top-56">{{ shop_name }}</h1>
     <h1 class="text-[black] text-4xl font-bold mb-5 mt-36 w-96 font-bold absolute bottom-14 fixed right-80 top-40">{{ menu_name }}</h1>
     <div class="bg-[#FF0F0F] w-40 h-12 rounded-2xl hover:border-4 border-[#FFCA99] mr-72 mt-36 absolute right-64 top-64 text-center">
@@ -19,7 +21,7 @@
     <form method="post" action="food">
         {% csrf_token %}
         <button class="mt-8 bg-[#890202] w-80 h-12 rounded-xl inset-x-1/2 hover:border-4 border-[#FFCA99]">
-            <h1 class="text-[#FFDD64] text-2xl font-bold id="stat-btn" class="btn"">Return</h1>
+            <h1 class="text-[#FFDD64] text-2xl font-bold" id="stat-btn" class="btn">Return</h1>
         </button>
     </form>
 </body>
