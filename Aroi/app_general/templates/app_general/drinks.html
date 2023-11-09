@@ -21,7 +21,7 @@
             <form method="post" action="random_drinks_action">
                 {% csrf_token %}
                 <div class="mt-8">
-                    <input type="number" placeholder="your money" class="text-center mt-36 bg-white w-80 h-12 rounded-xl hover:border-4 border-red-600" name="price_limit2" id="price_limit2">
+                    <input type="number" placeholder="your money" class="text-center mt-36 bg-white w-80 h-12 rounded-xl hover:border-4 border-red-600" name="price_limit2" id="price_limit2" min=10 required>
                 </div>
                 <button class="mt-8 bg-[#890202] w-80 h-12 rounded-xl hover:border-4 border-[#FFCA99]">
                     <h1 class="text-[#FFDD64] text-2xl font-bold id="stat-btn" class="btn"">random</h1>
