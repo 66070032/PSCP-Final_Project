@@ -16,5 +16,11 @@
     <div class="bg-[#FF0F0F] w-40 h-12 rounded-2xl hover:border-4 border-[#FFCA99] mr-72 mt-36 absolute right-64 top-64 text-center">
         <h1 class="text-[white] text-2xl mt-10 font-bold absolute bottom-1 right-10">{{ menu_price }} บาท</h1>
     </div>
+    <form method="post" action="food">
+        {% csrf_token %}
+        <button class="mt-8 bg-[#890202] w-80 h-12 rounded-xl inset-x-1/2 hover:border-4 border-[#FFCA99]">
+            <h1 class="text-[#FFDD64] text-2xl font-bold id="stat-btn" class="btn"">Return</h1>
+        </button>
+    </form>
 </body>
 </html>
